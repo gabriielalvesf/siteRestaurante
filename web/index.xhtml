@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Food Lovers Restaurant Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+	<meta name="description" content="Website Description" />
+	<meta name="keywords" content="Website Keywords" />
+        <h:outputStylesheet library="style" name="style.css"  />
+        <h:outputStylesheet library="style" name="prettyPhoto.css"  />
+        <h:outputStylesheet library="style" name="stylemobile.css"  />
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css' />
+	
+	<!--[if IE 7]>
+			<style type="text/css">@import "style/ie7.css";</style>
+	<![endif]-->
+	<!--[if IE 8]>
+			<style type="text/css">@import "style/ie8.css";</style>
+	<![endif]-->
+	
+        <h:outputScript library="script" name="modernizr.js" />
+        <h:outputScript library="script" name="jquery.js" />
+        <h:outputScript library="script" name="jquery.prettyPhoto.js" />
+        <h:outputScript library="script" name="jquery.cycle.js" />
+        <h:outputScript library="script" name="twitter.js" />
+        <h:outputScript library="script" name="gettwitter.js" />
+        <h:outputScript library="script" name="jquery.retina.js" />
+	<script type="text/javascript">
+	$(document).ready(function (){
+		if( navigator.userAgent.match(/Android/i) ||
+		 navigator.userAgent.match(/webOS/i) ||
+		 navigator.userAgent.match(/iPhone/i) ||
+		 navigator.userAgent.match(/iPod/i) ||
+		 navigator.userAgent.match(/BlackBerry/)
+		 ){
+			
+		} else {
+
+			$('#slideshow').cycle({ 
+				fx:    'fade', 
+				delay: 2000,
+				timeout: 6000
+			});
+		}
+		$('#restaurant-info h1, #restaurant-info h2, #restaurant-info h3').delay(0).fadeOut(0);
+		$('#restaurant-info h1').delay(100).fadeIn(700);
+		$('#restaurant-info h2').delay(450).fadeIn(700);
+		$('#restaurant-info h3').delay(700).fadeIn(700);
+		$('#logo img[data-retina]').retina({checkIfImageExists: true});
+	});
+	</script>
+    </h:head>
+
+    <h:body class="home">
+
+        <ui:insert name="top">
+                
+            <div id="slideshow">
+                <div class="panel-slide" id="slide-1"></div>
+                <div class="panel-slide" id="slide-2"></div>
+                <div class="panel-slide" id="slide-3"></div>
+            </div>
+	<div id="shadow"></div>
+	<div id="container">
+		<header id="banner" class="clearfix">
+			<a href="index.html" id="logo"><img src="./images/logo.png" alt="Foodilicious - Best Sushi Ever" data-retina="images/logo-retina.png" /></a>
+			<nav id="nav" class="clearfix">
+				<ul id="nav-main">
+					<li class="current-menu-item"><a href="index.xhtml">Home</a></li>
+					<li><a href="restaurantes.xhtml">Restaurantes</a></li>
+					
+					<li><a href="pratos.xhtml">Pratos</a></li>
+					<li><a href="contato.xhtml">Contato</a></li>
+				</ul>
+			</nav>
+		</header>
+            </div>
+               
+            </ui:insert>
+
+        <div id="content" class="center_content">
+            <ui:insert name="content">
+                <div id="content-homepage">
+			<hgroup id="restaurant-info" class="clearfix">
+				<h1>&quot;Novo metodo para buscar sua comida predileta&quot;</h1>
+				<h2 id="phone"><strong>Melhores restaurantes estão na nossa lista</strong></h2>
+				<h3 id="info-opening">Você é proprietario e quer divulgar, envie um contato.</h3>
+			</hgroup>
+			<aside id="panel-front" class="clearfix">
+				<article class="static-page">
+					<h3 id="title-homepage">Welcome to &quot;<em>Food Lovers</em>&quot; Restaurant &amp; Cafe</h3>
+					<img src="./images/img-1.jpg" alt="Angkringan" class="imgframe" />
+					<p><strong>Foodilicious Sushi Restaurant</strong> is the best Sushi restaurant in Bali, which you can found amazing Food from around the world.</p>
+					<p>Found on 1878 by Chef Ketut Putu, we already have more than 45 branch around the <strong>World &amp; Universe</strong>.</p>
+					<a href="#" class="button-more">More Info</a>
+				</article>
+			</aside>
+		</div>
+            </ui:insert>
+        </div>
+
+        <div id="bottom">
+            <ui:insert name="bottom">
+                <footer id="footer" class="clearfix">
+			<aside class="box-footer">
+				<h4><span>Food Lovers Restaurant</span></h4>
+				<p>1823 4th Street Barkeley, CA 94710 USA<br />
+				<strong>Phone:</strong> +62 743 4738 <strong>Fax:</strong> +62 843 8492<br />
+				<strong>Email:</strong> hello@sushirestaurant.com</p>
+				<a href="./contact.html" class="button-contact">Contact Us</a>
+			</aside>
+			<aside class="box-footer daily">
+				<h4>Open Daily</h4>
+				<p>Mon-Fri: 10am - 10pm<br />
+				Sat-Sun: 09am - 11pm</p>
+			</aside>
+			<aside id="footer-copyright">
+				<ul id="list-social">
+					<li><a href="#" id="icon-facebook">Facebook</a></li>
+					<li><a href="#" id="icon-twitter">Twitter</a></li>
+					<li><a href="#" id="icon-linkedin">Linkedin</a></li>
+					<li><a href="#" id="icon-gplus">Google Plus</a></li>
+					<li><a href="#" id="icon-yelp">Yelp</a></li>
+				</ul>
+				<p>You can use this area to put some text, any text you want will fit in this area. Maybe some <strong>address</strong> or branch or privacy policy or anything. Or some welcome message or maybe promotion text.</p>
+				<ul id="nav-footer" class="clearfix">
+					<li class="first">Copyright &copy; 2013, Busca Restaurante</li>
+					<li>by <a href="#">Gabriel e Vinicius</a></li>
+				</ul>
+			</aside>
+		</footer>
+        
+            </ui:insert>
+        </div>
+
+    </h:body>
+
+</html>

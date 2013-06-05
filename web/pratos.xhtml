@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:body>
+
+        <ui:composition template="./index.xhtml">
+ 
+            <ui:define name="content">
+                <script type="text/javascript">
+	$(document).ready(function (){
+		$(".food-sidebar").hover(function() {
+			$(this).children(".panel-price").slideToggle();
+				}, function() {
+			$(this).children(".panel-price").slideToggle();
+		});
+		$("a[data-rel^='prettyPhoto']").prettyPhoto({
+			default_width: 600,
+			default_height: 420
+		});
+		$('a[data-rel]').each(function() {
+			$(this).attr('rel', $(this).data('rel'));
+		});
+		$('.foods-1').hover(function() {
+			$(this).find('h4').animate({marginLeft:'25px'},'slow');
+			$(this).find('.price').animate({marginLeft:'25px'},'normal');
+			$(this).find(".link-zoom").slideToggle();
+		}, function() {
+			$(this).find('h4').animate({marginLeft:'0px'},'slow');
+			$(this).find('.price').animate({marginLeft:'0px'},'normal');
+			$(this).find(".link-zoom").slideToggle();
+		});
+		$('#logo img[data-retina]').retina({checkIfImageExists: true});
+	});
+	</script>
+               <div id="content" class="conteudoRestaurante full">
+			<div id="content-top"></div>
+			<div id="content-back" class="clearfix">
+				<div id="main-content">
+					<h1 id="main-title">Pratos</h1>
+					<ul class="list-foods-1 clearfix">
+						<li class="cat">
+							<h3>Beverages</h3>
+							<p>We serve fresh and delicious non alcohol drink. We also have traditional drink like Jamu. In the morning we serve fresh fruit juice.</p>
+						</li>
+						<li class="foods-1">
+							<img src="images/img-20.jpg" alt="Hot Cup Coffee" />
+							<h4>Hot Cup Coffee</h4>
+							<span class="price">$16.89</span>
+							<a href="images/img-21.jpg" class="link-zoom" data-rel="prettyPhoto" title="Hot Cup Coffee">Zoom</a>
+							<ul class="tag-foods">
+								<li>New</li>
+							</ul>
+							<div class="foods-info">
+								<p>Hot Luwak Coffee from Indonesia. The best and most delicious coffee now available.</p>
+								<div class="foods-option">
+									<h5 class="clearfix"><em>with milk</em> <span>$17.89</span></h5>
+									<h5 class="clearfix"><em>no sugar</em> <span>$13.49</span></h5>
+									<h5 class="clearfix"><em>with tea</em> <span>$23.49</span></h5>
+								</div>
+							</div>
+						</li>
+						<li class="foods-1">
+							<img src="images/img-10.jpg" alt="Chocolate Flow" />
+							<h4>Chocolate Flow</h4>
+							<span class="price">$16.89</span>
+							<a href="images/img-11.jpg" class="link-zoom" data-rel="prettyPhoto" title="Chocolate Flow">Zoom</a>
+							<div class="foods-info">
+								<p>Belgian chocolate cake with cream and rum from Netherland.</p>
+							</div>
+						</li>
+						<li class="foods-1 last">
+							<img src="images/img-12.jpg" alt="Hot Chocolate" />
+							<h4>Hot Cholocate</h4>
+							<span class="price">$16.89</span>
+							<a href="images/img-13.jpg" class="link-zoom" data-rel="prettyPhoto" title="Hot Chocolate">Zoom</a>
+							<ul class="tag-foods">
+								<li>New</li>
+								<li>Favorite</li>
+							</ul>
+							<div class="foods-info">
+								<p>Classic hot chocolate with ginger.</p>
+							</div>
+						</li>
+						<li class="foods-1">
+							<img src="images/img-14.jpg" alt="Orange Jelly Cream" />
+							<h4>Orange Jelly Cream</h4>
+							<span class="price">$11.89</span>
+							<a href="images/img-15.jpg" class="link-zoom" data-rel="prettyPhoto" title="Orange Jelly Cream">Zoom</a>
+							<ul class="tag-foods">
+								<li>New</li>
+							</ul>
+							<div class="foods-info">
+								<p>Orange jelly, very good if you have diet. Low carbohidrate and fat.</p>
+								<div class="foods-option">
+									<h5 class="clearfix"><em>with cream</em> <span>$13.89</span></h5>
+									<h5 class="clearfix"><em>no cherry</em> <span>$9.49</span></h5>
+								</div>
+							</div>
+						</li>
+						<li class="foods-1">
+							<img src="images/img-16.jpg" alt="src" />
+							<h4>Pancake</h4>
+							<span class="price">$16.89</span>
+							<a href="images/img-17.jpg" class="link-zoom" data-rel="prettyPhoto" title="Pancake">Zoom</a>
+							<div class="foods-info">
+								<p>Start your day with our favorite pancake. Only available at 9.00 - 11.00 am everyday.</p>
+							</div>
+						</li>
+						<li class="foods-1">
+							<img src="images/img-18.jpg" alt="Mango Juice" />
+							<h4>Mango Juice</h4>
+							<span class="price">$16.89</span>
+							<a href="images/img-19.jpg" class="link-zoom" data-rel="prettyPhoto" title="Mango Juice">Zoom</a>
+							<div class="foods-info">
+								<p>Fresh guava juice with orange and mango, our new favorite drink.</p>
+							</div>
+						</li>
+					</ul>
+					<ul class="list-foods-1 clearfix">
+						<li class="cat">
+							<h3>Main Courses</h3>
+							<p>We serve delicious beef and vegetable with original recipe from our in-house chef.</p>
+						</li>
+						<li class="foods-1">
+							<img src="images/img-8.jpg" alt="Mango Juice" />
+							<h4>Javanese Fried Noodle</h4>
+							<span class="price">$16.89</span>
+							<a href="images/img-7.jpg" class="link-zoom" data-rel="prettyPhoto" title="Javanese Noodle with Fried Onion">Zoom</a>
+							<ul class="tag-foods">
+								<li>New</li>
+							</ul>
+							<div class="foods-info">
+								<p>Original noodle from javanese, fried with onion, ketchup and garlic.</p>
+								<div class="foods-option">
+									<h5 class="clearfix"><em>with onion</em> <span>$17.89</span></h5>
+									<h5 class="clearfix"><em>no garlic</em> <span>$13.49</span></h5>
+									<h5 class="clearfix"><em>with roast duck</em> <span>$23.49</span></h5>
+								</div>
+							</div>
+						</li>
+						<li class="foods-1">
+							<img src="images/img-22.jpg" alt="Beef Stew" />
+							<h4>Beef Stew</h4>
+							<span class="price">$36.89</span>
+							<a href="images/img-23.jpg" class="link-zoom" data-rel="prettyPhoto" title="Beef Stew">Zoom</a>
+							<div class="foods-info">
+								<p>Kobe beef stew with potato, onion and garlic. Our favorite food.</p>
+								<div class="foods-option">
+									<h5 class="clearfix"><em>medium size</em> <span>$39.89</span></h5>
+									<h5 class="clearfix"><em>large size</em> <span>$43.49</span></h5>
+								</div>
+							</div>
+						</li>
+						<li class="foods-1 last">
+							<img src="images/img-24.jpg" alt="Fillet of Beef" />
+							<h4>Fillet of Beef</h4>
+							<span class="price">$16.89</span>
+							<a href="images/img-25.jpg" class="link-zoom" data-rel="prettyPhoto" title="Fillet of Beef">Zoom</a>
+							<ul class="tag-foods">
+								<li>New</li>
+								<li>Recommended</li>
+							</ul>
+							<div class="foods-info">
+								<p>Fillet of beef with asparagus spear and potatoes. Original recipe from our chef, only available if our chef available.</p>
+							</div>
+						</li>
+						<li class="foods-1">
+							<img src="images/img-26.jpg" alt="Potato Baked Dice" />
+							<h4>Potato Baked Dice</h4>
+							<span class="price">$16.89</span>
+							<a href="images/img-27.jpg" class="link-zoom" data-rel="prettyPhoto" title="Potato Baked Dice">Zoom</a>
+							<ul class="tag-foods">
+								<li>New</li>
+							</ul>
+							<div class="foods-info">
+								<p>Baked potato with beef and tofu. Not available in the morning.</p>
+								<div class="foods-option">
+									<h5 class="clearfix"><em>with crean</em> <span>$17.89</span></h5>
+									<h5 class="clearfix"><em>no potato</em> <span>$13.49</span></h5>
+									<h5 class="clearfix"><em>plate only</em> <span>$3.49</span></h5>
+								</div>
+							</div>
+						</li>
+						<li class="foods-1">
+							<img src="images/img-28.jpg" alt="Beef Mushroom Asian Sauce" />
+							<h4>Beef Mushroom Asian Sauce</h4>
+							<span class="price">$44.89</span>
+							<a href="images/img-29.jpg" class="link-zoom" data-rel="prettyPhoto" title="Beef Mushroom Asian Sauce">Zoom</a>
+							<div class="foods-info">
+								<p>5 Slice of beef with mushroom spicy sauce from Thailand.</p>
+							</div>
+						</li>
+						<li class="foods-1">
+							<img src="images/img-30.jpg" alt="Sirloin Grilled Steak" />
+							<h4>Sirloin Grilled Steak</h4>
+							<span class="price">$64.89</span>
+							<a href="images/img-31.jpg" class="link-zoom" data-rel="prettyPhoto" title="Sirloin Grilled Steak">Zoom</a>
+							<div class="foods-info">
+								<p>Our favorite steak, this Sirloin was grilled with vegetable and garlic.</p>
+							</div>
+						</li>
+						<li class="foods-1 last">
+							<img src="images/img-8.jpg" alt="Mango Juice" />
+							<h4>Javanese Fried Noodle</h4>
+							<span class="price">$16.89</span>
+							<a href="images/img-7.jpg" class="link-zoom" data-rel="prettyPhoto" title="Javanese Noodle with Fried Onion">Zoom</a>
+							<ul class="tag-foods">
+								<li>New</li>
+							</ul>
+							<div class="foods-info">
+								<p>Original noodle from javanese, fried with onion, ketchup and garlic.</p>
+								<div class="foods-option">
+									<h5 class="clearfix"><em>with onion</em> <span>$17.89</span></h5>
+									<h5 class="clearfix"><em>no garlic</em> <span>$13.49</span></h5>
+									<h5 class="clearfix"><em>with roast duck</em> <span>$23.49</span></h5>
+								</div>
+							</div>
+						</li>
+						<li class="foods-1">
+							<img src="images/img-24.jpg" alt="Fillet of Beef" />
+							<h4>Fillet of Beef</h4>
+							<span class="price">$16.89</span>
+							<a href="images/img-25.jpg" class="link-zoom" data-rel="prettyPhoto" title="Fillet of Beef">Zoom</a>
+							<ul class="tag-foods">
+								<li>New</li>
+								<li>Recommended</li>
+							</ul>
+							<div class="foods-info">
+								<p>Fillet of beef with asparagus spear and potatoes. Original recipe from our chef, only available if our chef available.</p>
+							</div>
+						</li>
+					</ul>
+					<ul class="list-foods-1 clearfix">
+						<li class="cat">
+							<h3>Beverages</h3>
+							<p>We serve fresh and delicious non alcohol drink. We also have traditional drink like Jamu. In the morning we serve fresh fruit juice.</p>
+						</li>
+						<li class="foods-1">
+							<img src="images/img-20.jpg" alt="Hot Cup Coffee" />
+							<h4>Hot Cup Coffee</h4>
+							<span class="price">$16.89</span>
+							<a href="images/img-21.jpg" class="link-zoom" data-rel="prettyPhoto" title="Hot Cup Coffee">Zoom</a>
+							<ul class="tag-foods">
+								<li>New</li>
+							</ul>
+							<div class="foods-info">
+								<p>Hot Luwak Coffee from Indonesia. The best and most delicious coffee now available.</p>
+								<div class="foods-option">
+									<h5 class="clearfix"><em>with milk</em> <span>$17.89</span></h5>
+									<h5 class="clearfix"><em>no sugar</em> <span>$13.49</span></h5>
+									<h5 class="clearfix"><em>with tea</em> <span>$23.49</span></h5>
+								</div>
+							</div>
+						</li>
+						<li class="foods-1">
+							<img src="images/img-10.jpg" alt="Chocolate Flow" />
+							<h4>Chocolate Flow</h4>
+							<span class="price">$16.89</span>
+							<a href="images/img-11.jpg" class="link-zoom" data-rel="prettyPhoto" title="Chocolate Flow">Zoom</a>
+							<div class="foods-info">
+								<p>Belgian chocolate cake with cream and rum from Netherland.</p>
+							</div>
+						</li>
+						<li class="foods-1 last">
+							<img src="images/img-12.jpg" alt="Hot Chocolate" />
+							<h4>Hot Cholocate</h4>
+							<span class="price">$16.89</span>
+							<a href="images/img-13.jpg" class="link-zoom" data-rel="prettyPhoto" title="Hot Chocolate">Zoom</a>
+							<ul class="tag-foods">
+								<li>New</li>
+								<li>Favorite</li>
+							</ul>
+							<div class="foods-info">
+								<p>Classic hot chocolate with ginger.</p>
+							</div>
+						</li>
+						<li class="foods-1">
+							<img src="images/img-14.jpg" alt="Orange Jelly Cream" />
+							<h4>Orange Jelly Cream</h4>
+							<span class="price">$11.89</span>
+							<a href="images/img-15.jpg" class="link-zoom" data-rel="prettyPhoto" title="Orange Jelly Cream">Zoom</a>
+							<ul class="tag-foods">
+								<li>New</li>
+							</ul>
+							<div class="foods-info">
+								<p>Orange jelly, very good if you have diet. Low carbohidrate and fat.</p>
+								<div class="foods-option">
+									<h5 class="clearfix"><em>with cream</em> <span>$13.89</span></h5>
+									<h5 class="clearfix"><em>no cherry</em> <span>$9.49</span></h5>
+								</div>
+							</div>
+						</li>
+						<li class="foods-1">
+							<img src="images/img-16.jpg" alt="src" />
+							<h4>Pancake</h4>
+							<span class="price">$16.89</span>
+							<a href="images/img-17.jpg" class="link-zoom" data-rel="prettyPhoto" title="Pancake">Zoom</a>
+							<div class="foods-info">
+								<p>Start your day with our favorite pancake. Only available at 9.00 - 11.00 am everyday.</p>
+							</div>
+						</li>
+						<li class="foods-1">
+							<img src="images/img-18.jpg" alt="Mango Juice" />
+							<h4>Mango Juice</h4>
+							<span class="price">$16.89</span>
+							<a href="images/img-19.jpg" class="link-zoom" data-rel="prettyPhoto" title="Mango Juice">Zoom</a>
+							<div class="foods-info">
+								<p>Fresh guava juice with orange and mango, our new favorite drink.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="content-bottom"></div>
+		</div>
+            </ui:define>
+            
+        </ui:composition>
+
+    </h:body>
+</html>

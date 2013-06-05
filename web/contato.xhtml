@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:body>
+
+        <ui:composition template="./index.xhtml">
+ 
+            <ui:define name="content">
+               <script type="text/javascript">
+	$(document).ready(function (){
+		$("a[data-rel^='prettyPhoto']").prettyPhoto({
+			default_width: 600,
+			default_height: 420
+		});
+		$('a[data-rel]').each(function() {
+			$(this).attr('rel', $(this).data('rel'));
+		});
+		$('#maps-tabs').tabs({ fx: { opacity: 'toggle' } });
+		$('#logo img[data-retina]').retina({checkIfImageExists: true});
+	});
+	</script>
+               <div id="content" class="conteudoRestaurante full">
+			<div id="content-top"></div>
+			<div id="content-back" class="clearfix">
+				<div id="main-content">
+					
+					<article class="static-page">
+						<h3>Contact Us</h3>
+						<!-- error message
+						<div class="errordiv">
+							Please type your email address!!
+						</div>
+						-->
+						<!-- correct message
+						<div class="correctdiv">
+							Thanks, we will reply your message immediately.
+						</div>
+						-->
+						<form method="post" action="#" id="form-contact" class="clearfix">
+							<div id="form-left">
+								<label for="text-name">Nome (obrigatorio)</label><br />
+								<input type="text" name="name" class="input" id="text-name" /><br />
+								<label for="text-email">Email (obrigatorio)</label><br />
+								<input type="text" name="email" class="input" id="text-email" /><br />
+								<label for="text-phone">Telefone (opcional)</label><br />
+								<input type="text" name="phone" class="input" id="text-phone" /><br />
+							</div>
+							<div id="form-right">
+								<label for="text-comment">Mensagem <span>(obrigatorio)</span></label><br />
+								<textarea cols="10" rows="20" class="input textarea" id="text-comment"></textarea><br />
+								<input type="submit" name="submit-comment" class="button" value="Enviar" />
+							</div>
+							<p id="text-contact">
+							We will reply your question immediately. You can also make a booking use this contact form, don��������t forget to write your phone number so we can call you back.</p>
+						</form>
+					</article>
+				</div>
+			</div>
+			<div id="content-bottom"></div>
+		</div>
+            </ui:define>
+            
+        </ui:composition>
+
+    </h:body>
+</html>
